@@ -1,0 +1,135 @@
+# ~/.config/starship.toml
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+command_timeout = 10000
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Sets user-defined palette
+palette = "catppuccin_mocha"
+
+# Change the default prompt format
+format = """\
+[╭╴](238)$os\
+$all[╰─](238)$character"""
+
+[character]
+# Note the use of Catppuccin color 'maroon'
+success_symbol = "[[♥](green) ❯](maroon)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+# No need for env variables as starship provides a way to show your current distro
+[os]
+format ='[$symbol](bold mauve)'   
+disabled = false
+
+[os.symbols]
+Windows = " "
+Arch = "󰣇"
+Ubuntu = ""
+Debian = " "
+Macos = " "
+
+# Shows the username
+[username]
+style_user = "mauve bold"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = false  # disable in powershell
+show_always = true
+
+[directory]
+truncation_length = 4
+# Catppuccin 'lavender'
+style = "bold lavender"
+
+[git_branch]
+symbol = "󰊢 "
+format = "on [$symbol$branch]($style) "
+truncation_length = 8
+truncation_symbol = "…/"
+style = "bold green"
+
+[git_status]
+format = '[\($all_status$ahead_behind\)]($style) '
+style = "bold green"
+conflicted = "🏳"
+up_to_date = " "
+untracked = " "
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+stashed = "󰏗 "
+modified = " "
+staged = '[++\($count\)](green)'
+renamed = "󰖷 "
+deleted = " "
+
+[terraform]
+format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
+
+[vagrant]
+format = "via [ vagrant $version]($style) "
+
+[docker_context]
+format = "via [ $context](bold blue) "
+
+[conda]
+truncation_length = 1
+symbol = "󰌠 "
+style = "bold yellow"
+format = "via [$symbol$environment]($style) "
+ignore_base = false
+disabled = false
+
+[python]
+symbol = "󰌠 "
+python_binary = "python3"
+
+[nodejs]
+format = "via [󰎙 $version](bold green) "
+disabled = false
+
+[ruby]
+format = "via [ $version]($style) "
+
+[php]
+format = "via [ ($version)]($style) "
+
+[lua]
+format = "via [ $version]($style) "
+
+[golang]
+format = "via [ $version]($style) "
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
