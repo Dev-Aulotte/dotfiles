@@ -35,6 +35,9 @@ end
 -- x to delete without yanking
 keymap.set("n", "x", '"_x', opts("Delete without yanking"))
 
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
+
 -- Increment number with + and decrement with -
 keymap.set({ "n", "v" }, "+", "<C-a>", opts("Increment number"))
 keymap.set({ "n", "v" }, "-", "<C-x>", opts("Decrement number"))
@@ -51,6 +54,11 @@ keymap.set("n", "<A-k>", ":m .-2<CR>==", opts("Move line up"))
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts("Move line down"))
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts("Move line up"))
 
+-- New tab
+keymap.set("n", "te", ":tabedit", opts("New tab"))
+keymap.set("n", "<tab>", ":tabnext<Return>", opts("Next tab"))
+keymap.set("n", "<s-tab>", ":tabprev<Return>", opts("Previous tab"))
+
 -- Leader s to rename globally the word under the cursor
 vim.keymap.set(
   "n",
@@ -61,3 +69,5 @@ vim.keymap.set(
 
 -- Leader x to make the current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", opts("Make the current file executable"))
+
+vim.keymap.set("i", "jk", "<ESC>", opts("jk to escape insert mode"))
