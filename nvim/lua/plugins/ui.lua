@@ -1,4 +1,5 @@
 return {
+  -- messages, cmdline and the popupmenu
   {
     "folke/noice.nvim",
     opts = function(_, opts)
@@ -51,6 +52,7 @@ return {
       opts.presets.lsp_doc_border = true
     end,
   },
+
   {
     "rcarriga/nvim-notify",
     opts = {
@@ -68,6 +70,8 @@ return {
       }
     end,
   },
+
+  -- buffer line
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
@@ -84,6 +88,51 @@ return {
       },
     },
   },
+
+  -- statusline
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
+    opts = {
+      options = {
+        -- globalstatus = false,
+        theme = "solarized_dark",
+      },
+    },
+  },
+
+  -- filename
+  {
+    "b0o/incline.nvim",
+    dependencies = { "craftzdog/solarized-osaka.nvim" },
+    event = "BufReadPre",
+    priority = 1200,
+    config = function()
+      local colors = require("solarized-osaka.colors").setup()
+      require("incline").setup({
+        highlight = {
+          groups = {
+            InclineNormal = { guibg = colors.magenta500, guifg = colors.base04 },
+            InclineNormalNC = { guifg = colors.violet500, guibg = colors.base03 },
+          },
+        },
+        window = { margin = { vertical = 0, horizontal = 1 } },
+        hide = {
+          cursorline = true,
+        },
+        render = function(props)
+          local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+          if vim.bo[props.buf].modified then
+            filename = "[+] " .. filename
+          end
+
+          local icon, color = require("nvim-web-devicons").get_icon_color(filename)
+          return { { icon, guifg = color }, { " " }, { filename } }
+        end,
+      })
+    end,
+  },
+
   {
     "folke/zen-mode.nvim",
     cmd = "ZenMode",
@@ -96,58 +145,22 @@ return {
     },
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("catppuccin").setup({
-        flavor = "mocha",
-        transparent_background = true,
-        styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-          comments = { "italic" }, -- Change the style of comments
-          conditionals = { "italic" },
-        },
-        integrations = {
-          aerial = true,
-          alpha = true,
-          cmp = true,
-          dashboard = true,
-          flash = true,
-          gitsigns = true,
-          headlines = true,
-          illuminate = true,
-          indent_blankline = { enabled = true },
-          leap = true,
-          lsp_trouble = true,
-          mason = true,
-          markdown = true,
-          mini = true,
-          native_lsp = {
-            enabled = true,
-            underlines = {
-              errors = { "undercurl" },
-              hints = { "undercurl" },
-              warnings = { "undercurl" },
-              information = { "undercurl" },
-            },
-          },
-          navic = { enabled = true, custom_bg = "lualine" },
-          neotest = true,
-          neotree = true,
-          noice = true,
-          notify = true,
-          semantic_tokens = true,
-          telescope = true,
-          treesitter = true,
-          treesitter_context = true,
-          which_key = true,
-        },
-      })
 
-      -- Use catppuccin
-      vim.cmd([[colorscheme catppuccin]])
+  {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+    opts = function(_, opts)
+      local logo = [[
+        ██████╗ ███████╗██╗   ██╗ █████╗ ███████╗██╗     ██╗███████╗███████╗
+        ██╔══██╗██╔════╝██║   ██║██╔══██╗██╔════╝██║     ██║██╔════╝██╔════╝
+        ██║  ██║█████╗  ██║   ██║███████║███████╗██║     ██║█████╗  █████╗  
+        ██║  ██║██╔══╝  ╚██╗ ██╔╝██╔══██║╚════██║██║     ██║██╔══╝  ██╔══╝  
+        ██████╔╝███████╗ ╚████╔╝ ██║  ██║███████║███████╗██║██║     ███████╗
+        ╚═════╝ ╚══════╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝     ╚══════╝
+      ]]
+
+      logo = string.rep("\n", 8) .. logo .. "\n\n"
+      opts.config.header = vim.split(logo, "\n")
     end,
   },
 }

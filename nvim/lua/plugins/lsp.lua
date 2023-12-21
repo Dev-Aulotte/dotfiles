@@ -5,7 +5,6 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "stylua",
-        "gopls",
         "selene",
         "luacheck",
         "shellcheck",
@@ -13,7 +12,6 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
-        "phpactor",
       })
     end,
   },
@@ -134,6 +132,11 @@ return {
             },
           },
         },
+        pylsp = {},
+        pyright = {
+          enabled = false,
+        },
+        phpactor = {},
       },
       setup = {},
     },
