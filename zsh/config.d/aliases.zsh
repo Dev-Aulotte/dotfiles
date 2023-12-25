@@ -14,3 +14,5 @@ alias br="brew remove"
 alias nvconf="cd ~/.config/nvim && nvim"
 
 alias vim="nvim"
+
+alias cl="clear"
