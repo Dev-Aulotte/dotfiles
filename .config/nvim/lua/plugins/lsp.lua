@@ -12,6 +12,8 @@ return {
                 "tailwindcss-language-server",
                 "typescript-language-server",
                 "css-lsp",
+                "intelephense",
+                "phpactor",
             })
         end,
     },
@@ -26,12 +28,16 @@ return {
                 cssls = {},
                 tailwindcss = {
                     root_dir = function(...)
-                        return require("lspconfig.util").root_pattern(".git")(...)
+                        return require("lspconfig.util").root_pattern(".git")(
+                            ...
+                        )
                     end,
                 },
                 tsserver = {
                     root_dir = function(...)
-                        return require("lspconfig.util").root_pattern(".git")(...)
+                        return require("lspconfig.util").root_pattern(".git")(
+                            ...
+                        )
                     end,
                     single_file_support = false,
                     settings = {
@@ -99,7 +105,10 @@ return {
                                 castNumberToInteger = true,
                             },
                             diagnostics = {
-                                disable = { "incomplete-signature-doc", "trailing-space" },
+                                disable = {
+                                    "incomplete-signature-doc",
+                                    "trailing-space",
+                                },
                                 -- enable = false,
                                 groupSeverity = {
                                     strong = "Warning",
@@ -127,6 +136,26 @@ return {
                                     indent_style = "space",
                                     indent_size = "2",
                                     continuation_indent_size = "2",
+                                },
+                            },
+                        },
+                    },
+                    intelephense = {
+                        -- enabled = false,
+                        settings = {
+                            intelephense = {
+                                telemetry = {
+                                    level = "off",
+                                },
+                            },
+                        },
+                    },
+                    phpactor = {
+                        -- enabled = false,
+                        settings = {
+                            phpactor = {
+                                telemetry = {
+                                    level = "off",
                                 },
                             },
                         },
