@@ -25,7 +25,7 @@ yabai -m config mouse_action2 resize
 # when window is dropped in center of another window, swap them (on edges it will split it)
 yabai -m mouse_drop_action swap
 
-yabai -m rule --add app="^Warp|Kitty|Alacritty|Wezterm|iTerm|Visual Studio Code|Zed$" space=1
+yabai -m rule --add app="^Warp|Kitty|Alacritty|WezTerm|iTerm|Visual Studio Code|Zed$" space=1
 yabai -m rule --add app="^Arc|Firefox Developer Edition|Safari$" space=2
 yabai -m rule --add app="^DBngin|TablePlus$" space=3
 yabai -m rule --add app="^Battle.net|World of Warcraft Classic$" space=4
