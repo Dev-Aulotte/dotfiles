@@ -42,34 +42,15 @@ keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
--- New tab
-keymap.set("n", "te", ":tabedit")
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
--- Split window
-keymap.set("n", "ss", ":split<Return>", opts)
-keymap.set("n", "sv", ":vsplit<Return>", opts)
--- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
-
--- Resize window
-keymap.set("n", "<C-w><left>", "<C-w><")
-keymap.set("n", "<C-w><right>", "<C-w>>")
-keymap.set("n", "<C-w><up>", "<C-w>+")
-keymap.set("n", "<C-w><down>", "<C-w>-")
-
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
-    vim.diagnostic.goto_next()
+  vim.diagnostic.goto_next()
 end, opts)
 
 keymap.set("n", "<leader>r", function()
-    require("noctua.hsl").replaceHexWithHSL()
+  require("noctua.hsl").replaceHexWithHSL()
 end)
 
 keymap.set("n", "<leader>i", function()
-    require("noctua.lsp").toggleInlayHints()
+  require("noctua.lsp").toggleInlayHints()
 end)
