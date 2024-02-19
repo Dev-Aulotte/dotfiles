@@ -29,7 +29,7 @@ yabai -m rule --add app="^Warp|Kitty|Alacritty|WezTerm|iTerm|Visual Studio Code|
 yabai -m rule --add app="^Arc|Firefox Developer Edition|Safari$" space=2
 yabai -m rule --add app="^DBngin|TablePlus$" space=3
 yabai -m rule --add app="^Postman$" space=4
-yabai -m rule --add app="^Message$" space=7
+yabai -m rule --add app="^Messages$" space=7
 yabai -m rule --add app="^Messenger" space=8
 yabai -m rule --add app="^Mail" space=9
 
