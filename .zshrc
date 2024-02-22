@@ -34,3 +34,7 @@ export HERD_PHP_82_INI_SCAN_DIR="/Users/caulotte/Library/Application Support/Her
 export HERD_PHP_74_INI_SCAN_DIR="/Users/caulotte/Library/Application Support/Herd/config/php/74/"
 
 eval "$(zoxide init zsh)"
+
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/caulotte/Library/Application Support/Herd/config/php/83/"
