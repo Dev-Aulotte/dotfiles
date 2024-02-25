@@ -8,13 +8,8 @@ return {
       -- document existing key chains
       require('which-key').register {
         ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
         ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-        ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       }
     end,
   },
@@ -127,7 +122,8 @@ return {
 
       vim.keymap.set('n', '<leader>a', function()
         harpoon:list():append()
-      end)
+      end, { desc = 'Harpoon this buffer' })
+
       vim.keymap.set('n', '<C-l>', function()
         harpoon.ui:toggle_quick_menu(harpoon:list())
       end)
@@ -144,6 +140,20 @@ return {
       vim.keymap.set('n', '<C-s>', function()
         harpoon:list():select(4)
       end)
+    end,
+  },
+
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v3.x',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+      'MunifTanjim/nui.nvim',
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    },
+    config = function()
+      vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<cr>', { desc = '[E]xplorer' })
     end,
   },
 }

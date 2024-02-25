@@ -33,3 +33,24 @@ vim.o.termguicolors = true
 -- Configure how new splits should be opened
 vim.o.splitright = true
 vim.o.splitbelow = true
+
+-- Sets how neovim will display certain whitespace in the editor.
+--  See :help 'list'
+--  and :help 'listchars'
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- Preview substitutions live
+vim.opt.inccommand = 'split'
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+vim.opt.wrap = false
+
+vim.opt.scrolloff = 8
+vim.opt.isfname:append '@-@'
+
+vim.opt.colorcolumn = '80'
