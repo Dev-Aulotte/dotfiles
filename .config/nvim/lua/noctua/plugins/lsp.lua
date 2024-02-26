@@ -50,6 +50,7 @@ return {
           map('<leader>ca', function()
             vim.lsp.buf.code_action { context = { only = { 'quickfix', 'refactor', 'source' } } }
           end, '[C]ode [A]ction')
+          map('<leader>cf', vim.lsp.buf.format, '[F]ormat')
           map('K', vim.lsp.buf.hover, 'Hover Documentation')
           map('<leader>cs', vim.lsp.buf.signature_help, 'Signature Documentation')
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
