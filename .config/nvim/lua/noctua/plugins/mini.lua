@@ -6,7 +6,6 @@ return {
       require('mini.bracketed').setup()
       require('mini.hipatterns').setup()
       require('mini.indentscope').setup()
-      require('mini.statusline').setup()
     end,
   },
 }
