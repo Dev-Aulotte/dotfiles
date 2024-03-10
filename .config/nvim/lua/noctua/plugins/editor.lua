@@ -122,24 +122,24 @@ return {
 			harpoon:setup()
 			-- REQUIRED
 
-			vim.keymap.set("n", "<leader>a", function()
+			vim.keymap.set("n", "<leader>ha", function()
 				harpoon:list():append()
 			end, { desc = "Harpoon this buffer" })
 
-			vim.keymap.set("n", "<C-p>", function()
+			vim.keymap.set("n", "<leader>he", function()
 				harpoon.ui:toggle_quick_menu(harpoon:list())
 			end)
 
-			vim.keymap.set("n", "<C-f>", function()
+			vim.keymap.set("n", "<leader>hh", function()
 				harpoon:list():select(1)
 			end)
-			vim.keymap.set("n", "<C-g>", function()
+			vim.keymap.set("n", "<leader>ht", function()
 				harpoon:list():select(2)
 			end)
-			vim.keymap.set("n", "<C-c>", function()
+			vim.keymap.set("n", "<leader>hn", function()
 				harpoon:list():select(3)
 			end)
-			vim.keymap.set("n", "<C-r>", function()
+			vim.keymap.set("n", "<leader>hs", function()
 				harpoon:list():select(4)
 			end)
 		end,
