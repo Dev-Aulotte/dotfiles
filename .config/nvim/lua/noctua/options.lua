@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -8,7 +8,7 @@ vim.o.hlsearch = false
 vim.o.number = true
 vim.o.relativenumber = true
 
-vim.o.clipboard = 'unnamedplus'
+vim.o.clipboard = "unnamedplus"
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -21,7 +21,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.wo.signcolumn = 'yes'
+vim.wo.signcolumn = "yes"
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -38,10 +38,10 @@ vim.o.splitbelow = true
 --  See :help 'list'
 --  and :help 'listchars'
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -51,6 +51,11 @@ vim.opt.expandtab = true
 vim.opt.wrap = false
 
 vim.opt.scrolloff = 8
-vim.opt.isfname:append '@-@'
+vim.opt.isfname:append("@-@")
 
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = "80"
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99
+vim.opt.foldenable = false

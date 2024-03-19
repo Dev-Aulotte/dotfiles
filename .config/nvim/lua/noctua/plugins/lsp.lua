@@ -43,21 +43,21 @@ return {
 					map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 					map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 					map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-					map("<leader>cD", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
-					map("<leader>co", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+					map("<leader>lD", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+					map("<leader>lo", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
 					map(
-						"<leader>cO",
+						"<leader>lO",
 						require("telescope.builtin").lsp_dynamic_workspace_symbols,
 						"[W]orkspace [S]ymbols"
 					)
-					map("<leader>cr", vim.lsp.buf.rename, "[R]e[n]ame")
-					map("<leader>cR", ":LspRestart<cr>", "[R]estart LSP")
-					map("<leader>ca", function()
+					map("<leader>lr", vim.lsp.buf.rename, "[R]e[n]ame")
+					map("<leader>lR", ":LspRestart<cr>", "[R]estart LSP")
+					map("<leader>la", function()
 						vim.lsp.buf.code_action({ context = { only = { "quickfix", "refactor", "source" } } })
 					end, "[C]ode [A]ction")
-					map("<leader>cf", vim.lsp.buf.format, "[F]ormat")
+					map("<leader>lf", vim.lsp.buf.format, "[F]ormat")
 					map("K", vim.lsp.buf.hover, "Hover Documentation")
-					map("<leader>cs", vim.lsp.buf.signature_help, "Signature Documentation")
+					map("<leader>ls", vim.lsp.buf.signature_help, "Signature Documentation")
 					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
 					local client = vim.lsp.get_client_by_id(event.data.client_id)

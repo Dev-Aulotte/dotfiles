@@ -7,8 +7,10 @@ return {
 
 			-- document existing key chains
 			require("which-key").register({
-				["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
+				["<leader>l"] = { name = "[C]ode", _ = "which_key_ignore" },
 				["<leader>g"] = { name = "[G]it", _ = "which_key_ignore" },
+				["<leader>gh"] = { name = "[H]unk", _ = "which_key_ignore" },
+				["<leader>gt"] = { name = "[T]oggle", _ = "which_key_ignore" },
 				["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
 			})
 		end,
@@ -63,6 +65,13 @@ return {
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 			vim.keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Search [G]it [F]iles" })
 			vim.keymap.set("n", "<leader><leader>", builtin.find_files, { desc = "[ ] Find Files" })
+			-- find files including ignore and hidden
+			vim.keymap.set("n", "<leader>sa", function()
+				builtin.find_files({
+					hidden = true,
+					no_ignore = true,
+				})
+			end, { desc = "[S]earch [A]ll" })
 
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()
