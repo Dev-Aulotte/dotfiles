@@ -16,7 +16,7 @@ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 
 -- Colorscheme
-config.color_scheme = "tokyonight_night"
+config.color_scheme = "Catppuccin Mocha"
 
 config.underline_thickness = 3
 config.cursor_thickness = 4
@@ -35,7 +35,7 @@ if wezterm.target_triple:find("windows") then
 		gui:set_position((screen.width - width) / 2, (screen.height - height) / 2)
 	end)
 else
-	config.term = "wezterm"
+	config.term = "xterm-256color"
 	config.window_decorations = "RESIZE"
 	config.enable_tab_bar = false
 end
@@ -65,7 +65,7 @@ config.font_rules = {
 -- Cursor
 config.default_cursor_style = "BlinkingBar"
 config.force_reverse_video_cursor = true
-config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
+config.window_padding = { left = 6, right = 6, top = 6, bottom = 6 }
 -- window_background_opacity = 0.9,
 -- cell_width = 0.9,
 config.scrollback_lines = 10000
