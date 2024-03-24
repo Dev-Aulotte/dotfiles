@@ -10,3 +10,8 @@ keymap.set("n", "<leader>gp", ":Neogit pull<CR>", { noremap = true, silent = tru
 keymap.set("n", "<leader>gP", ":Neogit push<CR>", { noremap = true, silent = true, desc = "Neogit Push" })
 keymap.set("n", "<leader>gf", ":Neogit fetch<CR>", { noremap = true, silent = true, desc = "Neogit Fetch" })
 keymap.set("n", "<leader>gb", ":Neogit branch<CR>", { noremap = true, silent = true, desc = "Neogit Branch" })
+
+-- TreesJ
+keymap.set("n", "gm", require("treesj").toggle, { noremap = true, silent = true, desc = "TreesJ Toggle" })
+keymap.set("n", "gS", require("treesj").split, { noremap = true, silent = true, desc = "TreesJ Split" })
+keymap.set("n", "gj", require("treesj").join, { noremap = true, silent = true, desc = "TreesJ Join" })
