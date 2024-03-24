@@ -249,6 +249,20 @@
             "manipulators": [
               {
                 "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "equal_sign"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
                   "key_code": "open_bracket",
                   "modifiers": {
                     "optional": ["any"]
