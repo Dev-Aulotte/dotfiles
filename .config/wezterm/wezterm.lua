@@ -41,7 +41,7 @@ else
 end
 
 -- Fonts
-config.font_size = 11
+config.font_size = 12
 config.font = wezterm.font({ family = "VictorMono Nerd Font" })
 config.bold_brightens_ansi_colors = true
 config.font_rules = {
