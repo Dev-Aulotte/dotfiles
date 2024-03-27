@@ -12,7 +12,7 @@ yabai -m config right_padding 5
 yabai -m config window_gap 5
 
 # center mouse on window with focus
-yabai -m config mouse_follows_focus on
+yabai -m config mouse_follows_focus off
 
 # modifier for clicking and dragging with mouse
 yabai -m config mouse_modifier alt
@@ -29,8 +29,8 @@ yabai -m rule --add app="^Warp|kitty|Alacritty|WezTerm|iTerm|Visual Studio Code|
 yabai -m rule --add app="^Arc|Firefox Developer Edition|Safari$" space=2
 yabai -m rule --add app="^DBngin|TablePlus$" space=3
 yabai -m rule --add app="^Postman$" space=4
-yabai -m rule --add app="^Messages$" space=7
-yabai -m rule --add app="^Messenger" space=8
+yabai -m rule --add app="^PS Remote Play$" space=5
+yabai -m rule --add app="^Messages$" space=8
 yabai -m rule --add app="^Mail" space=9
 
 yabai -m rule --add app="^System Settings$" manage=off
