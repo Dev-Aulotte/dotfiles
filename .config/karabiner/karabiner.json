@@ -18,331 +18,25 @@
         },
         "rules": [
           {
-            "description": "Alt Layer",
+            "description": "Number row",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "1",
+                  "key_code": "grave_accent_and_tilde",
                   "modifiers": {
-                    "mandatory": ["right_option"]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
                   {
-                    "key_code": "f1"
+                    "key_code": "backslash"
                   }
                 ],
                 "type": "basic"
               },
               {
                 "from": {
-                  "key_code": "2",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f2"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "3",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f3"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "4",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f4"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "5",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f5"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "6",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f6"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "7",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f7"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "8",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f8"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "9",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f9"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "0",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f10"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "hyphen",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f11"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "equal_sign",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f12"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "q",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "1",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "w",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "2",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "open_bracket",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "r",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "close_bracket",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "t",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "7",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "a",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "3",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "s",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "4",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "d",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "9",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "f",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "0",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "g",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "equal_sign"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "z",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
+                  "key_code": "1"
                 },
                 "to": [
                   {
@@ -354,9 +48,407 @@
               },
               {
                 "from": {
-                  "key_code": "x",
+                  "key_code": "1",
                   "modifiers": {
-                    "mandatory": ["right_option"]
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "1"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "1",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "1"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "2"
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "2",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "2"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "2",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "2"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "3"
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "3",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "3"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "3",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "3"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "4"
+                },
+                "to": [
+                  {
+                    "key_code": "9",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "4",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "4"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "4",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "4"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "5"
+                },
+                "to": [
+                  {
+                    "key_code": "7",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "5",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "5"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "5",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "5"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "6"
+                },
+                "to": [
+                  {
+                    "key_code": "4",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "6",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "6"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "6",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "6"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "7"
+                },
+                "to": [
+                  {
+                    "key_code": "0",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "7",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "7"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "7",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "7"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "8"
+                },
+                "to": [
+                  {
+                    "key_code": "close_bracket",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "8",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "8"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "8",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "8"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "9"
+                },
+                "to": [
+                  {
+                    "key_code": "close_bracket"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "9",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "9"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "9",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "9"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "0"
+                },
+                "to": [
+                  {
+                    "key_code": "1",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "0",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "0"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "0",
+                  "modifiers": {
+                    "mandatory": ["right_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "0"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "hyphen"
+                },
+                "to": [
+                  {
+                    "key_code": "2",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "hyphen",
+                  "modifiers": {
+                    "mandatory": ["left_shift"]
                   }
                 },
                 "to": [
@@ -369,42 +461,14 @@
               },
               {
                 "from": {
-                  "key_code": "c",
+                  "key_code": "hyphen",
                   "modifiers": {
-                    "mandatory": ["right_option"]
+                    "mandatory": ["right_shift"]
                   }
                 },
                 "to": [
                   {
-                    "key_code": "open_bracket"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "v",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "close_bracket"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "b",
-                  "modifiers": {
-                    "mandatory": ["right_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "equal_sign",
+                    "key_code": "6",
                     "modifiers": ["left_shift"]
                   }
                 ],
@@ -412,28 +476,11 @@
               },
               {
                 "from": {
-                  "key_code": "y",
-                  "modifiers": {
-                    "mandatory": ["left_option"]
-                  }
+                  "key_code": "equal_sign"
                 },
                 "to": [
                   {
-                    "key_code": "grave_accent_and_tilde"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "h",
-                  "modifiers": {
-                    "mandatory": ["left_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "grave_accent_and_tilde",
+                    "key_code": "3",
                     "modifiers": ["left_shift"]
                   }
                 ],
@@ -441,28 +488,29 @@
               },
               {
                 "from": {
-                  "key_code": "u",
+                  "key_code": "equal_sign",
                   "modifiers": {
-                    "mandatory": ["left_option"]
+                    "mandatory": ["left_shift"]
                   }
                 },
                 "to": [
                   {
-                    "key_code": "backslash"
+                    "key_code": "8",
+                    "modifiers": ["left_shift"]
                   }
                 ],
                 "type": "basic"
               },
               {
                 "from": {
-                  "key_code": "j",
+                  "key_code": "equal_sign",
                   "modifiers": {
-                    "mandatory": ["left_option"]
+                    "mandatory": ["right_shift"]
                   }
                 },
                 "to": [
                   {
-                    "key_code": "backslash",
+                    "key_code": "8",
                     "modifiers": ["left_shift"]
                   }
                 ],
@@ -553,6 +601,20 @@
                 "to": [
                   {
                     "key_code": "close_bracket"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "non_us_backslash",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde"
                   }
                 ],
                 "type": "basic"
