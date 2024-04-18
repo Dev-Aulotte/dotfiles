@@ -14,6 +14,7 @@ config.webgpu_power_preference = "HighPerformance"
 
 -- Colorscheme
 config.color_scheme = "Catppuccin Mocha"
+config.window_background_opacity = 0.8
 
 config.term = "screen-256color"
 config.window_decorations = "RESIZE"
