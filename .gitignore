@@ -3,5 +3,5 @@
 .config/karabiner/automatic_backups
 .local/share
 .local/state
-.local/.DS_Store
-.DS_Store
+**/.DS_Store
+.config/zed/.tmp*
