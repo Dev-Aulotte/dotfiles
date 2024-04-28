@@ -4,17 +4,12 @@ local config = wezterm.config_builder()
 
 wezterm.log_info("reloading")
 
--- require("tabs").setup(config)
--- require("mouse").setup(config)
--- require("links").setup(config)
--- require("keys").setup(config)
-
 config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 
 -- Colorscheme
 config.color_scheme = "Catppuccin Mocha"
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.7
 
 config.term = "screen-256color"
 config.window_decorations = "RESIZE"
