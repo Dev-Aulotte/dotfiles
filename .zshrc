@@ -59,3 +59,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 eval "$(zoxide init zsh)"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
