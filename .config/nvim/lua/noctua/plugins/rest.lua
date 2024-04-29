@@ -1,16 +1,18 @@
 return {
   {
+    'vhyrro/luarocks.nvim',
+    priority = 1000,
+    config = true,
+    opts = {
+      rocks = { 'lua-curl', 'nvim-nio', 'mimetypes', 'xml2lua' },
+    },
+  },
+  {
     'rest-nvim/rest.nvim',
     ft = 'http',
     cmd = 'Rest',
     dependencies = {
-      {
-        'vhyrro/luarocks.nvim',
-        priority = 1000,
-        opts = {
-          rocks = { 'lua-curl', 'nvim-nio', 'mimetypes', 'xml2lua' },
-        },
-      },
+      { 'luarocks.nvim' },
       {
         'AstroNvim/astrocore',
         opts = function(_, opts)
