@@ -60,3 +60,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 eval "$(zoxide init zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
