@@ -31,9 +31,10 @@ yabai -m rule --add app="^Arc|Firefox Developer Edition|Safari$" space=2
 yabai -m rule --add app="^Zed|Visual Studio Code|IntelliJ IDEA Ultimate|IntelliJ IDEA Community|PhpStorm|WebStorm$" space=3
 yabai -m rule --add app="^DBngin|TablePlus$" space=4
 yabai -m rule --add app="^Postman$" space=5
-yabai -m rule --add app="^PS Remote Play$" space=6
-yabai -m rule --add app="^Messages|Beeper$" space=8
-yabai -m rule --add app="^Mail" space=9
+yabai -m rule --add app="^Obsidian$" space=6
+yabai -m rule --add app="^Messages$" space=8
+yabai -m rule --add app="^Mail$" space=9
+yabai -m rule --add app="^Discord$" space=10
 
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
