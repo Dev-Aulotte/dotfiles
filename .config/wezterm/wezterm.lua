@@ -1,40 +1,57 @@
----@type Wezterm
 local wezterm = require("wezterm")
+local mux = wezterm.mux
+local action = wezterm.action
+
 local config = wezterm.config_builder()
 
-wezterm.log_info("reloading")
+wezterm.on("gui-startup", function()
+	local tab, pane, window = mux.spawn_window({})
+	window:gui_window():maximize()
+end)
 
-config.front_end = "WebGpu"
-config.webgpu_power_preference = "HighPerformance"
+return {
+	front_end = "WebGpu",
+	webgpu_power_preference = "HighPerformance",
 
--- Colorscheme
-config.color_scheme = "Catppuccin Mocha"
-config.window_background_opacity = 0.7
-
-config.term = "screen-256color"
-config.window_decorations = "RESIZE"
-config.enable_tab_bar = false
-
--- Fonts
-config.font_size = 13
-config.font = wezterm.font({ family = "JetBrainsMono Nerd Font" })
-config.bold_brightens_ansi_colors = true
-config.font_rules = {
-	{
-		intensity = "Bold",
-		italic = true,
-		font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Bold", style = "Italic" }),
+	window_decorations = "RESIZE",
+	inactive_pane_hsb = {
+		saturation = 0.8,
+		brightness = 0.7,
 	},
-	{
-		italic = true,
-		intensity = "Half",
-		font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "DemiBold", style = "Italic" }),
+	window_padding = {
+		left = 10,
+		right = 10,
+		top = 10,
+		bottom = 10,
 	},
-	{
-		italic = true,
-		intensity = "Normal",
-		font = wezterm.font({ family = "JetBrainsMono Nerd Font", style = "Italic" }),
+
+	color_scheme = "rose-pine-moon",
+	term = "screen-256color",
+	enable_tab_bar = false,
+
+	font_size = 13,
+	font = wezterm.font({ family = "FiraCode Nerd Font" }),
+	bold_brightens_ansi_colors = true,
+	adjust_window_size_when_changing_font_size = false,
+
+	font_rules = {
+		{
+			intensity = "Bold",
+			italic = true,
+			font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Bold", style = "Italic" }),
+		},
+		{
+			italic = true,
+			intensity = "Half",
+			font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "DemiBold", style = "Italic" }),
+		},
+		{
+			italic = true,
+			intensity = "Normal",
+			font = wezterm.font({ family = "JetBrainsMono Nerd Font", style = "Italic" }),
+		},
 	},
+
+	use_dead_keys = false,
+	scrollback_lines = 10000,
 }
-
-return config --[[@as Wezterm]]
