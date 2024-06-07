@@ -2,13 +2,13 @@
   {
     "bindings": {
       // Project Panel
-      "a": "project_panel::NewFile",
-      "d": "project_panel::NewDirectory",
-      "D": "project_panel::Delete",
-      "y": "project_panel::Copy",
-      "x": "project_panel::Cut",
-      "p": "project_panel::Paste",
-      "r": "project_panel::Rename",
+      "ctrl-a": "project_panel::NewFile",
+      "ctrl-d": "project_panel::NewDirectory",
+      "ctrl-D": "project_panel::Delete",
+      "ctrl-y": "project_panel::Copy",
+      "ctrl-x": "project_panel::Cut",
+      "ctrl-p": "project_panel::Paste",
+      "ctrl-r": "project_panel::Rename",
 
       // Workspace
       "ctrl-e": "workspace::ToggleLeftDock",
