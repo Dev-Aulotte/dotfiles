@@ -26,7 +26,7 @@ return {
 	},
 
 	color_scheme = "rose-pine-moon",
-	term = "screen-256color",
+	term = "xterm-256color",
 	enable_tab_bar = false,
 
 	font_size = 13,
