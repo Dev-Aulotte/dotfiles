@@ -47,7 +47,7 @@ opt.scrolloff = 10 -- Lines of context
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 opt.shiftround = true -- Round indent
 opt.shiftwidth = 4 -- Size of an indent
-opt.shortmess:append({ W = true, I = true, c = true, C = true })
+opt.shortmess:append { W = true, I = true, c = true, C = true }
 opt.showmode = false -- Dont show mode since we have a statusline
 opt.sidescrolloff = 8 -- Columns of context
 opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
@@ -71,7 +71,7 @@ opt.wrap = false -- Disable line wrap
 opt.swapfile = false -- Disable swap file
 opt.backup = false -- Disable backup file
 
-if vim.fn.has("nvim-0.10") == 1 then
+if vim.fn.has "nvim-0.10" == 1 then
     opt.smoothscroll = true
     opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
     opt.foldmethod = "expr"

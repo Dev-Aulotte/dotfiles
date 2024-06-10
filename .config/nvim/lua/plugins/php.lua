@@ -1,4 +1,8 @@
 return {
+    recommanded = {
+        ft = "php",
+        root = { "composer.json", ".git" },
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         opts = function(_, opts)
@@ -46,7 +50,7 @@ return {
             },
         },
         opts = function(_, opts)
-            local nls = require("null-ls")
+            local nls = require "null-ls"
             opts.sources = vim.list_extend(opts.sources or {}, {
                 nls.builtins.formatting.pretty_php,
             })
@@ -65,14 +69,18 @@ return {
         "mfussenegger/nvim-dap",
         optional = true,
         dependencies = {
-            {
-                "williamboman/mason.nvim",
-                opts = function(_, opts)
-                    opts.ensure_installed = opts.ensure_installed or {}
-                    vim.list_extend(opts.ensure_installed, { "php-debug-adapter" })
-                end,
-            },
+            "williamboman/mason.nvim",
+            opts = { ensure_installed = { "php-debug-adapter" } },
         },
+        opts = function()
+            local dap = require "dap"
+            local path = require("mason-registry").get_package("php-debug-adapter"):get_install_path()
+            dap.adapters.php = {
+                type = "executable",
+                command = "node",
+                args = { path .. "/extension/out/phpDebug.js" },
+            }
+        end,
     },
     {
         "nvim-neotest/neotest",
