@@ -23,7 +23,7 @@
     "bindings": {
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
-      "l R": "editor::Rename"
+      "L R": "editor::Rename"
     }
   },
   {
@@ -46,7 +46,10 @@
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
-      "j k": "vim::NormalBefore"
+      "j k": "vim::NormalBefore",
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrev",
+      "ctrl-o": "editor::ConfirmCompletion"
     }
   }
 ]
