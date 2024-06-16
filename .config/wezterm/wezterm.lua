@@ -1,8 +1,5 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
-local action = wezterm.action
-
-local config = wezterm.config_builder()
 
 wezterm.on("gui-startup", function()
 	local tab, pane, window = mux.spawn_window({})
@@ -25,30 +22,31 @@ return {
 		bottom = 10,
 	},
 
-	color_scheme = "rose-pine-moon",
+	color_scheme = "tokyonight-night",
 	term = "xterm-256color",
 	enable_tab_bar = false,
+	window_background_opacity = 0.80,
 
-	font_size = 13,
-	font = wezterm.font({ family = "FiraCode Nerd Font" }),
-	bold_brightens_ansi_colors = true,
+	font_size = 14,
+	font = wezterm.font({ family = "FantasqueSansM Nerd Font" }),
+	bold_brightens_ansi_colors = false,
 	adjust_window_size_when_changing_font_size = false,
 
 	font_rules = {
 		{
 			intensity = "Bold",
 			italic = true,
-			font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Bold", style = "Italic" }),
+			font = wezterm.font({ family = "FantasqueSansM Nerd Font", weight = "Bold", style = "Italic" }),
 		},
 		{
 			italic = true,
 			intensity = "Half",
-			font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "DemiBold", style = "Italic" }),
+			font = wezterm.font({ family = "FantasqueSansM Nerd Font", weight = "DemiBold", style = "Italic" }),
 		},
 		{
 			italic = true,
 			intensity = "Normal",
-			font = wezterm.font({ family = "JetBrainsMono Nerd Font", style = "Italic" }),
+			font = wezterm.font({ family = "FantasqueSansM Nerd Font", style = "Italic" }),
 		},
 	},
 
