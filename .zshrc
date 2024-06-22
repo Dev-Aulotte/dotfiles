@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Homebrew
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   # If you're using macOS, you'll want this enabled
@@ -57,9 +50,6 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -111,7 +101,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
+eval "$(starship init zsh)"
 
 # use colorls instead of ls
 alias ls="exa --icons -F -H --group-directories-first --git"
@@ -128,14 +118,7 @@ alias br="brew remove"
 alias c="clear"
 alias n="nvim"
 
-alias zr="zellij-runner"
-
 # Herd injected PHP binary.
 export PATH="/Users/caulotte/Library/Application Support/Herd/bin/":$PATH
 
-export ZELLIJ_RUNNER_ROOT_DIR=$HOME/Developer
-export ZELLIJ_RUNNER_IGNORE_DIRS="node_modules,target,vendor"
-export ZELLIJ_RUNNER_MAX_DIRS_DEPTH="3"
-export ZELLIJ_RUNNER_LAYOUTS_DIR=".config/zellij/layouts"
-export ZELLIJ_RUNNER_BANNERS_DIR=".config/zellij/banners"
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+neofetch
