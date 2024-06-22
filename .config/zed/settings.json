@@ -4,13 +4,13 @@
 
   "theme": {
     "mode": "system",
-    "dark": "Rosé Pine Moon",
-    "light": "Rosé Pine Dawn"
+    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Frappé"
   },
 
   "ui_font_size": 14,
-  "buffer_font_size": 13,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 14,
+  "buffer_font_family": "FantasqueSansM Nerd Font",
   "buffer_font_feature": {
     "liga": true
   },

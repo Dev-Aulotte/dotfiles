@@ -23,7 +23,8 @@
     "bindings": {
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
-      "L R": "editor::Rename"
+      "L R": "editor::Rename",
+      "g R": "editor::GoToImplementation"
     }
   },
   {
