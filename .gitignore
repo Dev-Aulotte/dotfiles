@@ -5,3 +5,5 @@
 .local/state
 **/.DS_Store
 .config/zed/.tmp*
+.config/zed/embeddings/semantic-index-db.0.mdb
+.config/zed/prompts/prompts-library-db.0.mdb
