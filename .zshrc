@@ -68,9 +68,6 @@ autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # Keybindings
 bindkey -e
 
@@ -104,16 +101,20 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 # use colorls instead of ls
-alias ls="exa --icons -F -H --group-directories-first --git"
-alias ll="ls -alF"
+alias ls="eza --icons -F -H --group-directories-first --git"
+alias ll="ls -al"
+alias lt="ls -T --git-ignore"
+alias lta="ls -Ta"
+
+alias install="nix profile install nixpkgs#"
 
 # Brew command
-alias bu="brew update"
-alias buu="brew update && brew upgrade"
-alias bi="brew install"
-alias bic="brew install --cask"
-alias bs="brew search"
-alias br="brew remove"
+#alias bu="brew update"
+#alias buu="brew update && brew upgrade"
+#alias bi="brew install"
+#alias bic="brew install --cask"
+#alias bs="brew search"
+#alias br="brew remove"
 
 alias c="clear"
 alias n="nvim"
